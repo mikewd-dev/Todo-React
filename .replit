@@ -27,3 +27,6 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd my-todo-app && npm run dev"
+
+[[ports]]
+localPort = 5173
