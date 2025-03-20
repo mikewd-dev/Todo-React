@@ -1,0 +1,122 @@
+
+> my-todo-app@0.0.0 dev
+> vite
+
+
+  VITE v6.2.2  ready in 813 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://172.31.128.131:5173/
+  ➜  press h + enter to show help
+7:03:17 PM [vite] (client) Pre-transform error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:03:17 PM [vite] (client) Pre-transform error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:03:17 PM [vite] Internal server error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:03:18 PM [vite] Internal server error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:04:45 PM [vite] Internal server error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:04:45 PM [vite] Internal server error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:05:25 PM [vite] Internal server error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css
+7:05:25 PM [vite] Internal server error: Failed to load PostCSS config (searchPath: /home/runner/workspace/my-todo-app): [Error] It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Re (/home/runner/workspace/my-todo-app/node_modules/tailwindcss/dist/lib.js:33:1889)
+    at autoprefixer (/home/runner/workspace/my-todo-app/postcss.config.ts:5:13)
+    at Object.<anonymous> (/home/runner/workspace/my-todo-app/postcss.config.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.transformer [as .js] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:2:1115)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Function.scopedRequire [as require] (file:///home/runner/workspace/my-todo-app/node_modules/tsx/dist/register-C3TE0KFF.mjs:3:1850)
+  Plugin: vite:css
+  File: /home/runner/workspace/my-todo-app/src/index.css

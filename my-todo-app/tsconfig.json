@@ -1,7 +1,19 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext",                      // Use the latest ECMAScript features
+    "module": "ESNext",                      // Use ES module syntax
+    "jsx": "react-jsx",                      // Enable React JSX syntax
+    "strict": true,                          // Enable strict type checking
+    "esModuleInterop": true,                 // Improve compatibility with CommonJS modules
+    "skipLibCheck": true,                    // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file casing
+    "moduleResolution": "bundler",           // Required for Vite compatibility
+    "allowSyntheticDefaultImports": true,    // Allow default imports even if they don't have a default export
+    "baseUrl": "./",                         // Base URL for module resolution
+    "paths": {
+      "@/*": ["src/*"]                       // Alias for cleaner imports (e.g., `@/components/Button`)
+    }
+  },
+  "include": ["src"],                        // Include the `src` folder in the build
+  "exclude": ["node_modules", "dist"]        // Exclude `node_modules` and `dist` from compilation
 }
