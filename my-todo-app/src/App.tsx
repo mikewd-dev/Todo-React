@@ -1,10 +1,11 @@
 import { useState } from 'react'
-
+import Newtodo from './Newtodo'
 
 function App() {
   return(
     <div>
-      <h1>This will  be a todo</h1>
+      <h1>Todo</h1>
+    <Newtodo />
     </div>
   )
 
