@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Newtodo from './Newtodo'
+import './App.css'
 
 function App() {
   return(

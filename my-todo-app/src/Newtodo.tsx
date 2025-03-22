@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './NewTodo.css';
 
   const NewTodo: React.FC = () => {
   const [todo, setTodo] = useState<string>('');
@@ -11,6 +11,7 @@ const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     setTodos((prevTodos) => [...prevTodos, todo]);
     setTodo('');
   }
+  
 
  } 
 return(
@@ -24,8 +25,9 @@ return(
   </form>
   <ul>
     {todos.map((todo, index) => (
-    <div>
+    <div className="todoList">
     <input type="radio"/>
+      <br/>
     <li key={index}>{todo}</li>
     </div>
     ))}

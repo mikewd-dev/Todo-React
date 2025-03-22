@@ -1,0 +1,29 @@
+.todoList{
+  display: flex;
+  flex-direction: row;
+  padding-left:4px;
+  gap: 8px;
+  align-items: center;
+  align-self: center;
+  }
+
+input[type="radio"]{
+  appearance: none;
+  opacity: 0.5;
+  border-radius: 50%;
+  border:0.5px solid #ccc;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #00c7fc, #be38f3);
+  border: 1px solid #0056d6;
+  opacity: 1;
+}
