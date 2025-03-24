@@ -26,6 +26,12 @@
     transform: rotate(360deg);
   }
 }
+.todoTitle {
+  dipslay: flex;
+  flex-direction: column;
+  justify-content:left;
+  }
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -40,6 +46,8 @@
 .read-the-docs {
   color: #888;
 }
+
+  
 
 h1 {
   font-size: 2.5em;

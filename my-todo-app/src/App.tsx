@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import Newtodo from './Newtodo'
+import { useState } from 'react';
+import NewTodo from './NewTodo';
 import './App.css'
 
 function App() {
   return(
-    <div>
+    <div className="todoTitle">
       <h1>Todo</h1>
-    <Newtodo />
+    <NewTodo />
     </div>
   )
 
