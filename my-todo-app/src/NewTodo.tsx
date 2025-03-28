@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import AddTodo from './AddTodo';
 import './NewTodo.css';
-
+import TodoStats from './StatsTodo';
+import LeftTodo from './LeftTodo';
 const NewTodo: React.FC = () => {
   const [todos, setTodos] = useState<{ text: string; completed: boolean }[]>([]);
 
@@ -38,7 +39,9 @@ const NewTodo: React.FC = () => {
             </div>
           </section>
         ))}
+        <LeftTodo leftTodos = {todos}/>
       </ul>
+      
     </div>
   );
 };

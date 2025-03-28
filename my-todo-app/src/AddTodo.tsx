@@ -1,34 +1,34 @@
 import { useState } from 'react';
 import './AddTodo.css'
 interface AddTodoProps {
-  onAddTodo: (text: string) => void;  // Receive the function as a prop
+  onAddTodo: (text: string) => void;
 }
 
 const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
-  const [todo, setTodo] = useState<string>('');  // Handle the text input
-  const [isChecked, setIsChecked] = useState<boolean>(false);  // Track if checkbox is checked
+  const [todo, setTodo] = useState<string>('');
+  const [isChecked, setIsChecked] = useState<boolean>(false);
   
   const handleCheckboxChange = () => {
     if (todo.trim() !== '' && !isChecked) {
-      onAddTodo(todo);  // Add todo when checkbox is checked
-      setTodo('');  // Clear the input field
-      setIsChecked(false);  // Uncheck the checkbox
+      onAddTodo(todo);
+      setTodo('');
+      setIsChecked(false);
     }
-    setIsChecked(!isChecked);  // Toggle checkbox state
+
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (todo.trim() !== '') {
-      onAddTodo(todo);  // Add todo
-      setTodo('');  // Reset input field
+      onAddTodo(todo); 
+      setTodo(''); 
     }
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input
+        <input className='todoCheck'
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}  // Handle checkbox change
@@ -38,7 +38,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}  // Handle text input change
-          placeholder="Add a new task"
+          placeholder="Create a new todo"
         />
 
       </form>
