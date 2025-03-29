@@ -3,6 +3,7 @@ import AddTodo from './AddTodo';
 import './NewTodo.css';
 import TodoStats from './StatsTodo';
 import LeftTodo from './LeftTodo';
+import ClearTodo from './ClearComplete';
 const NewTodo: React.FC = () => {
   const [todos, setTodos] = useState<{ text: string; completed: boolean }[]>([]);
 
@@ -39,7 +40,10 @@ const NewTodo: React.FC = () => {
             </div>
           </section>
         ))}
+        <div className='bottomMenu'>
         <LeftTodo leftTodos = {todos}/>
+        <ClearTodo todos = {todos} setTodos = {setTodos} />
+        </div>
       </ul>
       
     </div>

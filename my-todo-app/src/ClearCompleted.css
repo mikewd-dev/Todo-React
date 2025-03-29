@@ -1,0 +1,11 @@
+.clearCompleted{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+    border: none;
+}
+
+input {
+    font-size: 10px;
+}
