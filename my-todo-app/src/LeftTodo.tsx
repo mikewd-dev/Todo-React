@@ -8,7 +8,9 @@ const LeftTodo: React.FC<LeftTodoProps> = ({leftTodos})=> {
  const leftItems = leftTodos.reduce((count, leftTodo) => !leftTodo.completed ? count + 1 : count, 0);
     
 return (
-    <p className="leftTodos">{`${leftItems} items left`}</p>
+    <div className="leftTodos">
+    <p>{`${leftItems} items left`}</p>
+    </div>
 )
 }
 export default LeftTodo

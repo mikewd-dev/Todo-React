@@ -1,0 +1,14 @@
+.filterMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 5px;
+    border: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  li{
+    font-size:  10px;
+  }
+  

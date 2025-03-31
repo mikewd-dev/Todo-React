@@ -4,11 +4,14 @@ import './NewTodo.css';
 import TodoStats from './StatsTodo';
 import LeftTodo from './LeftTodo';
 import ClearTodo from './ClearComplete';
+import ShowTodo from './TodoStatus';
+
 const NewTodo: React.FC = () => {
   const [todos, setTodos] = useState<{ text: string; completed: boolean }[]>([]);
+  const [filter, setFilter] = useState<"all" | "active" | "completed">("all"); 
 
   const addTodo = (text: string) => {
-    setTodos((prevTodos) => [...prevTodos, { text, completed: false }]);  // Add the todo with completed = false
+    setTodos((prevTodos) => [...prevTodos, { text, completed: false }]);
   };
 
   const strikeThrough = (index: number): void => {
@@ -19,33 +22,49 @@ const NewTodo: React.FC = () => {
     );
   };
 
+  const handleFilterChange = (newFilter: "all" | "active" | "completed") => {
+    setFilter(newFilter);
+  };
+
   return (
     <div>
-      <AddTodo onAddTodo={addTodo} />  {/* Passing addTodo function to AddTodo */}
+      <AddTodo onAddTodo={addTodo} />  
       <ul>
-        {todos.map((todo, index) => (
-          <section className="todoList" key={index}>
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => strikeThrough(index)}  // Toggle completed state
-            />
-            <div className="todoBox">
-              <li
-                id={`todo-${index}`}
-                style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-              >
-                {todo.text}
-              </li>
-            </div>
-          </section>
-        ))}
+        {todos
+          .filter((todo) => 
+            filter === "all" ||
+            (filter === "active" && !todo.completed) ||
+            (filter === "completed" && todo.completed)
+          )
+          .map((todo, index) => (
+            <section className="todoList" key={index}>
+              <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => strikeThrough(index)}
+              />
+              <div className="todoBox">
+                <li
+                  id={`todo-${index}`}
+                  style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+                >
+                  {todo.text}
+                </li>
+              </div>
+            </section>
+          ))}
         <div className='bottomMenu'>
-        <LeftTodo leftTodos = {todos}/>
-        <ClearTodo todos = {todos} setTodos = {setTodos} />
+          <LeftTodo leftTodos={todos} />
+          <ClearTodo todos={todos} setTodos={setTodos} />
+          
+          
+          <ShowTodo 
+            todos={todos} 
+            filter={filter} 
+            onFilterChange={handleFilterChange} 
+          />
         </div>
       </ul>
-      
     </div>
   );
 };
