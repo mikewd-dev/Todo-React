@@ -3,9 +3,10 @@
   flex-direction: row;
   gap: 8px;
   align-items: center;
+  justify-content: center;
   border-radius: 8px 8px 0 0;
   border-bottom: 0.25px solid #999999;
-padding-left: 10px;
+ padding-left: 21px;
 }
 
 .todoList:last-child {
@@ -13,7 +14,7 @@ padding-left: 10px;
 }
 
 .addTodo {
-  margin-left: 8px;
+  padding-left: 21px;
 }
 
 input[type="checkbox"] {
@@ -22,24 +23,21 @@ input[type="checkbox"] {
   -moz-appearance: none;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   border: 0.25px solid #adadad;
-  margin-left: 10px;
-  margin-right: 10px;
   position: relative;
   height:20px;
   width: 20px;
 }
 
-ul {
+.added-todos{
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   border-radius: 3px;
   border: 1px solid #be38f3;
   width: 100%;
-  margin-left: 25px;
+  justify-content: center;
+  
 }
 
 
@@ -57,8 +55,6 @@ input[type="checkbox"]:checked::after {
   font-size: 12px;
   color: #ffffff;
   opacity: 1;
-  margin-left: 10px;
-  margin-right: 10px;
   position: absolute;
 }
 
@@ -80,7 +76,9 @@ input[type="checkbox"]:checked::after {
 .bottomMenu {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly ;
   align-items: center;
-  padding-right: 15px;
+  justify-content: center;
+  align-content: space-around;
+  gap: 10px;
+  padding-left: 5px;
 }

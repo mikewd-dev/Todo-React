@@ -21,13 +21,14 @@ const NewTodo: React.FC = () => {
       )
     );
   };
+  
 
   const handleFilterChange = (newFilter: "all" | "active" | "completed") => {
     setFilter(newFilter);
   };
 
   return (
-    <div>
+    <div className='added-todos'>
       <AddTodo onAddTodo={addTodo} />  
       <ul>
         {todos
@@ -46,7 +47,7 @@ const NewTodo: React.FC = () => {
               <div className="todoBox">
                 <li
                   id={`todo-${index}`}
-                  style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+                  style={{ color: todo.completed ? 'grey' : 'white', fontWeight:todo.completed ? 100 :"normal",textDecoration: todo.completed ? 'line-through' : 'none' }}
                 >
                   {todo.text}
                 </li>
@@ -55,14 +56,12 @@ const NewTodo: React.FC = () => {
           ))}
         <div className='bottomMenu'>
           <LeftTodo leftTodos={todos} />
-          <ClearTodo todos={todos} setTodos={setTodos} />
-          
-          
           <ShowTodo 
             todos={todos} 
             filter={filter} 
             onFilterChange={handleFilterChange} 
           />
+          <ClearTodo leftTodos={todos} setTodos={setTodos} />
         </div>
       </ul>
     </div>

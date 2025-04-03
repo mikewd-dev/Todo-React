@@ -26,7 +26,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
   };
 
   return (
-    <div>
+    <div className='form-container'>
       <form onSubmit={handleSubmit}>
         <input className='todoCheck'
           type="checkbox"
@@ -42,7 +42,8 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
         />
 
       </form>
-    </div>
+      </div>
+  
   );
 };
 

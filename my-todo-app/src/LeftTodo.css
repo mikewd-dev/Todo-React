@@ -2,10 +2,6 @@
 display:flex;
 flex-direction: row;
 align-items: center;
-height:50px;
-margin-left:15px;
-gap: 8px;
-}
-p{
-    font-size: 10px;
+width: 100%;
+font-size: 10px;
 }

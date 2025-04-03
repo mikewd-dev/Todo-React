@@ -9,8 +9,8 @@ interface TodoStatusProps {
 
 const TodoStatus: React.FC<TodoStatusProps> = ({ todos, filter, onFilterChange }) => {
   return (
-    <div>
-      <ul className='filterMenu'>
+    
+      <ul className='filter'>
         <li 
           className={filter === "all" ? "active" : ""} 
           onClick={() => onFilterChange("all")}
@@ -30,7 +30,7 @@ const TodoStatus: React.FC<TodoStatusProps> = ({ todos, filter, onFilterChange }
           Completed
         </li>
       </ul>
-    </div>
+    
   );
 };
 

@@ -14,9 +14,11 @@ const ClearTodo: React.FC<ClearTodoProps> =({todos, setTodos}) => {
       setTodos((prev) => prev.filter((todo)=> !todo.completed))
     }
 return (
-        <form className='clearCompleted' onSubmit={handleDelete}>
+    <div className="clear">
+        <form className='clear-completed' onSubmit={handleDelete}>
         <input type = 'submit' value = "Clear Completed"/>
         </form>
+        </div>
 )
 }
 export default ClearTodo
