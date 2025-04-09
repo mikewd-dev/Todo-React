@@ -1,0 +1,15 @@
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+  .filter li{
+    font-size:  10px;
+    padding-left: 5px;
+  }
+  
+  .filter li:hover{
+    color: blue;
+  }

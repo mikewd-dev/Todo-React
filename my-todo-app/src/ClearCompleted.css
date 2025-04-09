@@ -1,0 +1,20 @@
+.clear-completed{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-right: 5px;
+    border:  none;
+}
+
+.clear {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.clear-completed input {
+    font-size: 10px;
+    text-align: center;
+}

@@ -1,3 +1,35 @@
 input[type="checkbox"]{
-  border: 50%
-}
+    border: 50%;
+    height: 20px;
+    width: 20px;
+  }
+
+  .form-container{
+    display: flex;
+    justify-content: center;
+    width:100%
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    width: 100%;
+    border:1px solid cornflowerblue;
+    border-radius: 3px;
+    padding-left: 21px;
+  }
+
+  .todoCheck {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+
+  .todoInput {
+    width: 100%;
+    margin-left: 21px;
+  }
+
