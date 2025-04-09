@@ -1,29 +1,14 @@
 import { useState } from 'react';
+import AddTodo from './AddTodo';
 import './NewTodo.css';
 
   const NewTodo: React.FC = () => {
-  const [todo, setTodo] = useState<string>('');
-    const [todos, setTodos] = useState<{ text: string; completed: boolean }[]>([]);
+    const [todos, setTodos] = useState<{text: string; completed: boolean }[]>([]);
 
-  
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      if (todo.trim() !== '') {
-        setTodos((prevTodos) => [
-          ...prevTodos,
-          { text: todo, completed: false },  
-        ]);
-        setTodo('');
-      }
-    };
-    
-  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => { setTodo(e.target.value); }
-    
-
-
- const handleDelete=(index:number):void => {(setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index)))
+  const addTodo = (text: string) => {
+    setTodos((prevTodos) => [...prevTodos, { text, completed: false }]);
   }
+
 
 const strikeThrough = (index:number):void => {setTodos((prevTodos) => prevTodos.map((todo, i) => i === index ? {...todo, completed: !todo.completed } : todo
 )
@@ -32,29 +17,24 @@ const strikeThrough = (index:number):void => {setTodos((prevTodos) => prevTodos.
   
 return(
   <div>
-  <form onSubmit={handleSubmit}>
-    <input type="text"
-      value={todo}
-      onChange={handleChange}
-    />
-  <button className="addTodo" type="submit">Add</button>
-  </form>
+  <AddTodo onAddTodo = {addTodo}/>
+      
   <ul>
     {todos.map((todo, index) => (
-    <div className="todoList">
+    <section className="todoList" key={index}>
     <input type="checkbox"
       checked= {todo.completed}
       onChange={() => strikeThrough(index)}
       />
-      <br/>
+      <div className="todoBox">
       <li
         id={`todo-${index}`}
         style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
       >
         {todo.text}
       </li>
-
-    </div>
+      </div>
+    </section>
     ))}
     </ul>
   </div>
