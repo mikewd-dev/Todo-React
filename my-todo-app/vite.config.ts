@@ -9,7 +9,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5173,
     allowedHosts: [
-      "a0a1397c-219d-48a5-9b71-4b45d9ae102f-00-3kd4t1wodgi0k.picard.replit.dev",
+      "7a6f73ee-d54d-47b6-aabf-fb8bff0b7ab0-00-3rqjno6ohyscf.riker.replit.dev",
     ],
   },
 });

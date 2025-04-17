@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  border: none;
 }
 
 .logo {
@@ -44,7 +45,7 @@ body, html{
   }
 }
 .todoTitle {
-  dipslay: flex;
+  display: flex;
   flex-direction: column;
   justify-content:left;
   }
@@ -64,7 +65,11 @@ body, html{
   color: #888;
 }
 
-  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
 h1 {
   font-size: 2.5em;

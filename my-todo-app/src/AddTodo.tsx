@@ -28,16 +28,16 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
   return (
     <div className='form-container'>
       <form onSubmit={handleSubmit}>
-        <input className='todoCheck'
+        <input className='addtodoCheck'
           type="checkbox"
           checked={isChecked}
-          onChange={handleCheckboxChange}  // Handle checkbox change
+          onChange={handleCheckboxChange} 
         />
         <input
           className="todoInput"
           type="text"
           value={todo}
-          onChange={(e) => setTodo(e.target.value)}  // Handle text input change
+          onChange={(e) => setTodo(e.target.value)}
           placeholder="Create a new todo"
         />
 

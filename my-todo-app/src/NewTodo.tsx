@@ -30,7 +30,7 @@ const NewTodo: React.FC = () => {
   return (
     <div className='added-todos'>
       <AddTodo onAddTodo={addTodo} />  
-      <ul>
+      <ul className="listTodos">
         {todos
           .filter((todo) => 
             filter === "all" ||
@@ -39,7 +39,7 @@ const NewTodo: React.FC = () => {
           )
           .map((todo, index) => (
             <section className="todoList" key={index}>
-              <input
+              <input className="todoCheck"
                 type="checkbox"
                 checked={todo.completed}
                 onChange={() => strikeThrough(index)}
@@ -53,7 +53,9 @@ const NewTodo: React.FC = () => {
                 </li>
               </div>
             </section>
+          
           ))}
+        </ul>
         <div className='bottomMenu'>
           <LeftTodo leftTodos={todos} />
           <ShowTodo 
@@ -63,7 +65,6 @@ const NewTodo: React.FC = () => {
           />
           <ClearTodo leftTodos={todos} setTodos={setTodos} />
         </div>
-      </ul>
     </div>
   );
 };
