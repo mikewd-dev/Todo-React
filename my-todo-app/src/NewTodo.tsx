@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import AddTodo from './AddTodo';
 import './NewTodo.css';
-import TodoStats from './StatsTodo';
 import LeftTodo from './LeftTodo';
 import ClearTodo from './ClearComplete';
 import ShowTodo from './TodoStatus';
@@ -47,7 +46,7 @@ const NewTodo: React.FC = () => {
               <div className="todoBox">
                 <li
                   id={`todo-${index}`}
-                  style={{ color: todo.completed ? 'grey' : 'white', fontWeight:todo.completed ? 100 :"normal",textDecoration: todo.completed ? 'line-through' : 'none' }}
+                  style={{ color: todo.completed ? 'grey' : '#ebebeb', fontWeight:todo.completed ? 100 :"normal",textDecoration: todo.completed ? 'line-through' : 'none' }}
                 >
                   {todo.text}
                 </li>

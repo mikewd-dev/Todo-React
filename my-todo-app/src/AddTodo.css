@@ -1,13 +1,14 @@
 
-
   .form-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 400px;
-    margin-bottom:15px;
-  padding-left:21px;
-    border-radius: 5px
+  margin-left: 0;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom:26px;
+    background-color: #74a7ff;
   }
 
   form {
@@ -17,7 +18,8 @@
     height:50px;
     width:400px;
     border-radius: 3px;
-    
+    align-items: center;
+    gap: 10px;
   }
 
   .addtodoCheck {
@@ -25,7 +27,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 50%;
-    border: 1px solid #adadad;
+    border: 0.25px solid #adadad;
     height: 20px;
     width: 20px;
     box-sizing: border-box;
@@ -37,6 +39,6 @@
 
   .todoInput {
  padding-left: 10px;
-    
+    color: #ebebeb;
   }
 

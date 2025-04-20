@@ -25,6 +25,10 @@ body, html{
   display: flex;
   justify-content:center;
 }
+
+body{
+  background-color: #000000;
+}
 .todoTitle {
   display: flex;
   flex-direction: column;
