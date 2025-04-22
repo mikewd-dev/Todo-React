@@ -1,64 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   border: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-body, html{
-  margin:0;
-  height:100%;
-  display: flex;
-  justify-content:center;
-}
-
 body{
-  background-color: #000000;
+--bg-color: #1a0a52;
+--text-color: #dadada;
+background-color: var(--bg-color);
+color: var(--text-color);
+transition: background-color 0.3s, color 0.3s;
+margin: 0;
+height: 100%;
+display: flex;
+justify-content: center;
+}
+body.darkMode{
+  --bg-color: #000000;
+  --text-color: #ffffff;
 }
 
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .todoTitle {
   display: flex;
   flex-direction: column;
   justify-content:left;
   }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 
   *,
   *::before,
@@ -72,13 +52,10 @@ body{
   justify-content:space-between;
   gap: 10px;
   margin-bottom: 25px;
-  color: white;
+  color: var(--text-color);
 }
 
 h1 {
   font-size: 24px;
   font-weight: 600;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;}

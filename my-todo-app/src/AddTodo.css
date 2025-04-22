@@ -1,45 +1,48 @@
+.form-container{
+  --bg-color: #0042a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+margin-left: 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom:26px;
+  background-color: var(--bg-color);
+}
 
-  .form-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-  margin-left: 0;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom:26px;
-    background-color: #74a7ff;
-  }
+.darkMode .form-container{
+  --bg-color: #11053b;
+}
+  
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:50px;
+  width:400px;
+  border-radius: 3px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 3px;
+}
 
-  form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height:50px;
-    width:400px;
-    border-radius: 3px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 3px;
-  }
+.addtodoCheck {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  border: 0.25px solid #adadad;
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 21px;
+}
 
-  .addtodoCheck {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 50%;
-    border: 0.25px solid #adadad;
-    height: 20px;
-    width: 20px;
-    box-sizing: border-box;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    margin-left: 21px;
-  }
-
-  .todoInput {
+  .todoInput{
  padding-left: 10px;
-    color: #ebebeb;
   }
 
