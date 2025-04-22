@@ -9,8 +9,6 @@
   margin-left:0;
   margin-right:21px;
   background-color: #74a7ff;
-  border-radius: 3px;
-  
 }
 
 .listTodos{
@@ -23,6 +21,7 @@
 
 .todoList: first-child {
   border-top: none;
+  border-radius: 3px 3px;
 }
 
 .addTodo {

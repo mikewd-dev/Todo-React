@@ -29,15 +29,6 @@ body, html{
 body{
   background-color: #000000;
 }
-.todoTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content:left;
-  }
-  h1 {
-    font-size: 2.5em;
-  }
-
 
 
 @keyframes logo-spin {
@@ -75,9 +66,19 @@ body{
     box-sizing: border-box;
   }
 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: white;
+}
+
 h1 {
-  font-size: 2.5em;
+  font-size: 24px;
+  font-weight: 600;
 }
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;}
