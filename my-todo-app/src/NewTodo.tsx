@@ -5,6 +5,8 @@ import './NewTodo.css';
 import LeftTodo from './LeftTodo';
 import ClearTodo from './ClearComplete';
 import ShowTodo from './TodoStatus';
+import { motion } from "framer-motion";
+
 
 interface Todo {
   id: number;
@@ -43,7 +45,7 @@ const NewTodo: React.FC = () => {
   const TodoItem: React.FC<{ todo: Todo; index: number }> = ({ todo, index }) => {
     const [{ isDragging }, drag] = useDrag({
       type: 'TODO',
-      item: { index },
+      item: { id: todo.id, index },
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
@@ -51,43 +53,46 @@ const NewTodo: React.FC = () => {
 
     const [, drop] = useDrop({
       accept: 'TODO',
-      hover: (item: { index: number }) => {
-        if (item.index !== index) {
-          moveTodo(item.index, index);
-          item.index = index;
+      drop: (item: { id: number; index: number }) => {
+        const dragIndex = item.index;
+        const dropIndex = index;
+        if (dragIndex !== dropIndex) {
+          moveTodo(dragIndex, dropIndex);
         }
       },
     });
 
-    
-
-    
-
     return (
-      <section
-        className="todoList"
-        ref={(node) => drag(drop(node))}
-        style={{ opacity: isDragging ? 0.5 : 1 }}
+      <motion.div
+        layout
+        transition={{ type: 'spring', stiffness: 500 }}
+        whileDrag={{ scale: 1.05 }}
       >
-        <input
-          className="todoCheck"
-          type="checkbox"
-          checked={todo.completed}
-          onChange={() => strikeThrough(index)}
-        />
-        <div className="todoBox">
-          <li
-            id={`todo-${index}`}
-            style={{
-              color: todo.completed ? 'grey' : '#ebebeb',
-              fontWeight: todo.completed ? 100 : 'normal',
-              textDecoration: todo.completed ? 'line-through' : 'none',
-            }}
-          >
-            {todo.text}
-          </li>
-        </div>
-      </section>
+        <section
+          className="todoList"
+          ref={(node) => drag(drop(node))}
+          style={{ opacity: isDragging ? 0.5 : 1 }}
+        >
+          <input
+            className="todoCheck"
+            type="checkbox"
+            checked={todo.completed}
+            onChange={() => strikeThrough(index)}
+          />
+          <div className="todoBox">
+            <li
+              id={`todo-${index}`}
+              style={{
+                color: todo.completed ? 'grey' : '#ebebeb',
+                fontWeight: todo.completed ? 100 : 'normal',
+                textDecoration: todo.completed ? 'line-through' : 'none',
+              }}
+            >
+              {todo.text}
+            </li>
+          </div>
+        </section>
+      </motion.div>
     );
   };
 
@@ -101,9 +106,10 @@ const NewTodo: React.FC = () => {
             (filter === "active" && !todo.completed) ||
             (filter === "completed" && todo.completed)
           )
-          .map((todo, index) => (
-            <TodoItem key={todo.id} todo={todo} index={index} />
-          ))}
+          .map((todo) => {
+            const index = todos.findIndex((t) => t.id === todo.id);
+            return <TodoItem key={todo.id} todo={todo} index={index} />;
+          })}
       </ul>
       <div className='bottomMenu'>
         <LeftTodo leftTodos={todos} />
