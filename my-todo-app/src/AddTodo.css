@@ -1,5 +1,5 @@
 .form-container{
-  --bg-color: #0042a9;
+  --bg-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,10 +9,12 @@ margin-left: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-bottom:26px;
   background-color: var(--bg-color);
+  color: #000000;
 }
 
 .darkMode .form-container{
   --bg-color: #11053b;
+  color: #ffffff
 }
   
 form {

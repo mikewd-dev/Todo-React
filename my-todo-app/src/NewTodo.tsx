@@ -82,11 +82,7 @@ const NewTodo: React.FC = () => {
           <div className="todoBox">
             <li
               id={`todo-${index}`}
-              style={{
-                color: todo.completed ? 'grey' : '#ebebeb',
-                fontWeight: todo.completed ? 100 : 'normal',
-                textDecoration: todo.completed ? 'line-through' : 'none',
-              }}
+              className={`todoItem ${todo.completed ? 'completed' : ''}`}
             >
               {todo.text}
             </li>

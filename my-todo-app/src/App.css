@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;}
+@tailwind utilities;
 
 #root {
   max-width: 1280px;
@@ -12,20 +12,14 @@
   color: var(--text-color);
 }
 body{
---bg-color: #1a0a52;
---text-color: #dadada;
-background-color: var(--bg-color);
-color: var(--text-color);
+background: url('./assets/images/bg-mobile-light.jpg') no-repeat center center fixed;
 transition: background-color 0.3s, color 0.3s;
 margin: 0;
 height: 100%;
 display: flex;
 justify-content: center;
 }
-body.darkMode{
-  --bg-color: #000000;
-  --text-color: #ffffff;
-}
+
 
 button {
   background: none;
