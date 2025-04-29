@@ -14,6 +14,11 @@ interface Todo {
   completed: boolean;
 }
 
+  type DeleteTodoProps = {
+    todos: Todo[];
+    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  }
+  
 const NewTodo: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
@@ -22,6 +27,10 @@ const NewTodo: React.FC = () => {
     const newTodo = { id: Date.now(), text, completed: false };
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
+
+  const deleteTodo = (id: number) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+  }
 
   const strikeThrough = (index: number) => {
     setTodos((prevTodos) =>
@@ -42,7 +51,7 @@ const NewTodo: React.FC = () => {
     setTodos(updatedTodos);
   };
 
-  const TodoItem: React.FC<{ todo: Todo; index: number }> = ({ todo, index }) => {
+  const TodoItem: React.FC<{ todo: Todo; index: number; onDelete: (id: number) => void }> = ({ todo, index, onDelete }) => {
     const [{ isDragging }, drag] = useDrag({
       type: 'TODO',
       item: { id: todo.id, index },
@@ -86,12 +95,12 @@ const NewTodo: React.FC = () => {
             >
               {todo.text}
             </li>
+            <button onClick={() => onDelete(todo.id)} className="deleteTodo">X</button>
           </div>
         </section>
       </motion.div>
     );
   };
-
   return (
     <div className='added-todos'>
       <AddTodo onAddTodo={addTodo} />
@@ -104,7 +113,7 @@ const NewTodo: React.FC = () => {
           )
           .map((todo) => {
             const index = todos.findIndex((t) => t.id === todo.id);
-            return <TodoItem key={todo.id} todo={todo} index={index} />;
+            return <TodoItem key={todo.id} todo={todo} index={index} onDelete={deleteTodo}/>;
           })}
       </ul>
       <div className='bottomMenu'>

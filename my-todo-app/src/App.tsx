@@ -22,6 +22,9 @@ const App = () => {
       <DndProvider options={HTML5toTouch}>
         <NewTodo />
       </DndProvider>
+      <footer>
+        <p>Drag and drop to reorder list</p>
+      </footer>
     </div>
   );
 };
