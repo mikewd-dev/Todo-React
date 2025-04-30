@@ -6,7 +6,7 @@
   gap: 10px; 
   border-bottom: 0.1px solid #999999;
   margin-top: 0px;
-  width: 400px;
+  width: 80vw;
   margin-left: 0;
   margin-right: 0;
   background-color: var(--bg-color);
@@ -32,6 +32,20 @@
 .darkMode .todoList{
   --bg-color: #11053b;
   --text-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  border-bottom: 0.1px solid #999999;
+  margin-top: 0px;
+  width: 80vw;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: sans-serif;
   }
 
 .todoList.dragging {
@@ -102,7 +116,7 @@ li[draggable="true"] {
 .todoBox {
   display: flex;
   flex-direction: row;
-  width: 400px;
+  width: 80vw;;
   height: 50px;
   justify-content: space-between;
   align-items: center;
@@ -142,7 +156,7 @@ li[draggable="true"] {
   display: flex;
     flex-direction: row;
     align-items: center;
-    width:400px;
+    width:80vw;;
     justify-content: space-evenly;
     align-content: center;
     background-color: #ffffff;
