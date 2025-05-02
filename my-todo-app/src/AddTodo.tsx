@@ -38,7 +38,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
-          placeholder="Create a new todo"
+          placeholder="Create a new todo..."
         />
       </form>
       </div>

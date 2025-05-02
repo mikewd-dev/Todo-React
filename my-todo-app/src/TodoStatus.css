@@ -6,10 +6,12 @@
 
 
   .filter li{
-    font-size:  10px;
+    font-size:  14px;
+    font-weight: 400;
     padding-left: 5px;
+    color:hsl(234, 11%, 52%);
   }
   
   .filter li:hover{
-    color: blue;
+     color: hsl(220, 98%, 61%);
   }

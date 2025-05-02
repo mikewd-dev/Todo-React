@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 #root {
-  max-width: 1280px;
+  
+  max-width: 1440px;
   margin: 0;
   text-align: center;
   border: none;
   color: var(--text-color);
+  
 }
 body{
 background: url('./assets/images/bg-desktop-light.jpg') no-repeat center top fixed ;
@@ -17,8 +19,11 @@ min-height: 100vh;
 margin:0 auto;
 display: flex;
 align-content: top;
+justify-items: center;
 flex-direction: column;
-background-color: #ebebebff;
+background-color: hsl(236, 33%, 92%);
+font-family: 'Josefin Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 body.darkMode{
@@ -29,7 +34,7 @@ transition: background-color 0.3s, color 0.3s;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #11053b
+  background-color:hsl(235, 21%, 11%) ;
 }
 
 button {
@@ -41,9 +46,11 @@ button {
 .todoTitle {
   display: flex;
   flex-direction: column;
-  max-width:80vw;
+  max-width:90vw;
   margin-bottom:5px;
   margin-top: 25px;
+  font-size: 18px;
+  
   }
 
 .darkMode .todoTitle {
@@ -66,12 +73,15 @@ button {
   align-items: center;
   justify-content: space-between;
   color: #ffffff;
+  
 }
 
 h1 {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
   color: #ffff;
+  letter-spacing:0.35em;
+  font-weight: 700;
+  
 }
 
 footer{
