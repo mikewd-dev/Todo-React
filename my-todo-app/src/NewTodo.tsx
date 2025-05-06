@@ -6,6 +6,7 @@ import LeftTodo from './LeftTodo';
 import ClearTodo from './ClearComplete';
 import ShowTodo from './TodoStatus';
 import { motion } from "framer-motion";
+import { button } from 'framer-motion/client';
 
 
 interface Todo {
@@ -44,6 +45,8 @@ const NewTodo: React.FC = () => {
     setFilter(newFilter);
   };
 
+  
+
   const moveTodo = (draggedIndex: number, droppedIndex: number) => {
     const updatedTodos = [...todos];
     const [movedTodo] = updatedTodos.splice(draggedIndex, 1);
@@ -52,6 +55,7 @@ const NewTodo: React.FC = () => {
   };
 
   const TodoItem: React.FC<{ todo: Todo; index: number; onDelete: (id: number) => void }> = ({ todo, index, onDelete }) => {
+    const[isHovered, setIsHovered] = useState(false)
     const [{ isDragging }, drag] = useDrag({
       type: 'TODO',
       item: { id: todo.id, index },
@@ -88,14 +92,15 @@ const NewTodo: React.FC = () => {
             checked={todo.completed}
             onChange={() => strikeThrough(index)}
           />
-          <div className="todoBox">
+          <div className="todoBox" onMouseOver={() => setIsHovered(true)}
+            onMouseLeave ={ () => setIsHovered(false)}>
             <li
               id={`todo-${index}`}
               className={`todoItem ${todo.completed ? 'completed' : ''}`}
             >
               {todo.text}
             </li>
-            <button onClick={() => onDelete(todo.id)} className="deleteTodo">X</button>
+            <button onClick={() => onDelete(todo.id)} className="deleteTodo" style={{display:isHovered ? 'block':'none'}}>X</button>
           </div>
         </section>
       </motion.div>

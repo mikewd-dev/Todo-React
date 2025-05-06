@@ -7,7 +7,6 @@ interface AddTodoProps {
 const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
   const [todo, setTodo] = useState<string>('');
   const [isChecked, setIsChecked] = useState<boolean>(false);
-
   const handleCheckboxChange = () => {
     if (todo.trim() !== '' && !isChecked) {
       onAddTodo(todo);

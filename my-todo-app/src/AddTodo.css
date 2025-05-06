@@ -45,6 +45,17 @@ form {
   margin-left: 21px;
 }
 
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.mainWrapper {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
   .todoInput{
    padding-left: 10px;
     font-size: 14px;
