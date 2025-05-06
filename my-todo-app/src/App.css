@@ -47,10 +47,9 @@ button {
   display: flex;
   flex-direction: column;
   max-width:90vw;
-  margin-bottom:5px;
-  margin-top: 25px;
+  margin-bottom:50px;
+  margin-top: 50px;
   font-size: 18px;
-  
   }
 
 .darkMode .todoTitle {
@@ -73,7 +72,11 @@ button {
   align-items: center;
   justify-content: space-between;
   color: #ffffff;
-  
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index:1000;
 }
 
 h1 {
