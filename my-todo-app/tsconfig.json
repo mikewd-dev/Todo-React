@@ -3,7 +3,8 @@
     "target": "ESNext",                      // Use the latest ECMAScript features
     "module": "ESNext",                      // Use ES module syntax
     "jsx": "react-jsx",                      // Enable React JSX syntax
-    "strict": true,                          // Enable strict type checking
+    "strict": true,      
+    "types": ["babel_core"],                    // Enable strict type checking
     "esModuleInterop": true,                 // Improve compatibility with CommonJS modules
     "skipLibCheck": true,                    // Skip type checking of declaration files
     "forceConsistentCasingInFileNames": true, // Enforce consistent file casing

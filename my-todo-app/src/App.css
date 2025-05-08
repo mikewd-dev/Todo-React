@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 #root {
   
@@ -11,54 +9,13 @@
   color: var(--text-color);
   
 }
-body{
-background: url('./assets/images/bg-desktop-light.jpg') no-repeat center top fixed ;
-transition: background-color 0.3s, color 0.3s;
-background-size: 100vw;
-min-height: 100vh;
-margin:0 auto;
-display: flex;
-align-content: top;
-justify-items: center;
-flex-direction: column;
-background-color: hsl(236, 33%, 92%);
-font-family: 'Josefin Sans', sans-serif;
-  overflow-x: hidden;
-}
 
-body.darkMode{
-background: url('./assets/images/bg-desktop-dark.jpg') no-repeat center top fixed;
-transition: background-color 0.3s, color 0.3s;
-  background-size: 100vw;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color:hsl(235, 21%, 11%) ;
-}
+the
 
-button {
-  background: none;
-  border: none;
-  color: inherit;
-  }
 
-.todoTitle {
-  display: flex;
-  flex-direction: column;
-  max-width:90vw;
-  margin-bottom:50px;
-  margin-top: 50px;
-  font-size: 18px;
-  }
 
-.darkMode .todoTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-  gap: 5px;
-  margin-bottom:5px;
-  }
+
+
 
 
   *,
@@ -67,25 +24,14 @@ button {
     box-sizing: border-box;
   }
 
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #ffffff;
-  position: fixed;
-  top:0;
-  left:0;
-  width: 100%;
-  z-index:1000;
-}
 
-h1 {
-  font-size: 18px;
-  color: #ffff;
-  letter-spacing:0.35em;
-  font-weight: 700;
-  
-}
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+  }
+
+
 
 footer{
   margin-top:30px;

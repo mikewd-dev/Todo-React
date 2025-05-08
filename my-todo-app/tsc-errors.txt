@@ -1,0 +1,6 @@
+src/NewTodo.tsx(131,38): error TS2322: Type 'Dispatch<SetStateAction<Todo[]>>' is not assignable to type 'Dispatch<SetStateAction<{ text: string; completed: boolean; }[]>>'.
+  Type 'SetStateAction<{ text: string; completed: boolean; }[]>' is not assignable to type 'SetStateAction<Todo[]>'.
+    Type '{ text: string; completed: boolean; }[]' is not assignable to type 'SetStateAction<Todo[]>'.
+      Type '{ text: string; completed: boolean; }[]' is not assignable to type 'Todo[]'.
+        Property 'id' is missing in type '{ text: string; completed: boolean; }' but required in type 'Todo'.
+src/StatsTodo.tsx(11,8): error TS2741: Property 'leftTodos' is missing in type '{}' but required in type 'LeftTodoProps'.

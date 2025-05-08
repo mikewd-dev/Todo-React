@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { Todo } from "./NewTodo";
 import './LeftTodo.css'
 interface LeftTodoProps {
-    leftTodos: {text: string, completed : boolean}[];
+    leftTodos: Todo[];
 }
 const LeftTodo: React.FC<LeftTodoProps> = ({leftTodos})=> {
  const leftItems = leftTodos.reduce((count, leftTodo) => !leftTodo.completed ? count + 1 : count, 0);
