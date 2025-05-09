@@ -1,16 +1,15 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* Optional: your global styles below */
 
 #root {
   max-width: 1440px;
-  margin: 0;
+  margin: 0 auto;
   border: none;
-  color: var(--text-color);
 }
+
+
 
 button {
   background: none;

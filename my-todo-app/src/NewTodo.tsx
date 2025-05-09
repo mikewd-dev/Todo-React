@@ -108,7 +108,7 @@ const NewTodo: React.FC = () => {
   };
   return (
     <div className='added-todos'>
-      <AddTodo onAddTodo={addTodo} />
+      <AddTodo onAddTodo={addTodo} /> 
       <ul className="listTodos">
         {todos
           .filter((todo) =>
