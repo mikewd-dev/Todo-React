@@ -25,15 +25,16 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
   };
 
   return (
-    <div className='form-container'>
-      <form onSubmit={handleSubmit}>
-        <input className='addtodoCheck'
+    <div className='flex flex-row justify-center items-center w-[90vw] rounded-[5px] h-[50px] fixed bg-light dark:bg-dark gap-
+  4 mt-5'>
+      <form className ='flex flex-row items-center h-[50px] w-[90vw] gap-4 rounded-[5px] mb-0' onSubmit={handleSubmit}>
+        <input className='appearance-none -webkit-appearance-none -moz-appearance-none border-[1px] border-lightGrayishBlue dark:border-darkGrayishBlue rounded-[50%] h-[20px] w-[20px] ml-[21px] box-border'
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange} 
         />
         <input
-          className="todoInput"
+          className="text-darkGrayishBlue dark:text-lightGrayishBlue font-normal fs-[14px] pl-[10px]"
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
@@ -41,7 +42,6 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
         />
       </form>
       </div>
-
   );
 };
 

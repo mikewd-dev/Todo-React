@@ -13,9 +13,9 @@ const ClearTodo: React.FC<ClearTodoProps> =({todos, setTodos}) => {
       setTodos((prev) => prev.filter((todo)=> !todo.completed))
     }
 return (
-    <div className="clear">
-        <form className='clear-completed' onSubmit={handleDelete}>
-        <input type = 'submit' value = "Clear Completed"/>
+    <div className="flex flex-row justify-center items-center">
+        <form className='flex flex-end items-center w-[100%] mr-[5px] border-none' onSubmit={handleDelete}>
+        <input className="text-[14px] font-normal text-center text-darkGrayishBlue dark:text-lightGrayishBlue" type = 'submit' value = "Clear Completed"/>
         </form>
         </div>
 )

@@ -1,9 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 /* Optional: your global styles below */
-
-#root {
+:
+:root {
   max-width: 1440px;
   margin: 0 auto;
   border: none;
@@ -24,7 +26,7 @@ button {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 3;
   font-size: 12px;
   color: #999999;
 }

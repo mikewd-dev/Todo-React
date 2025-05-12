@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Todo } from "./NewTodo";
+import  NewTodo from "./NewTodo";
 import './LeftTodo.css'
 interface LeftTodoProps {
     leftTodos: Todo[];
@@ -10,7 +10,7 @@ const LeftTodo: React.FC<LeftTodoProps> = ({leftTodos})=> {
     
 return (
     
-    <div className="leftTodos">{`${leftItems} items left`}</div>
+    <div className="flex flex-row items-center text-[14px] font-normal text-darkGrayishBlue dark:text-lightGrayishBlue">{`${leftItems} items left`}</div>
     
 )
 }

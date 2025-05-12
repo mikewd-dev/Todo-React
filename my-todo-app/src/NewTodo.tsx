@@ -5,9 +5,7 @@ import './NewTodo.css';
 import LeftTodo from './LeftTodo';
 import ClearTodo from './ClearComplete';
 import ShowTodo from './TodoStatus';
-import { motion } from "framer-motion";
-import { button } from 'framer-motion/client';
-
+import { motion } from 'framer-motion';
 
 interface Todo {
   id: number;
@@ -15,11 +13,6 @@ interface Todo {
   completed: boolean;
 }
 
-  type DeleteTodoProps = {
-    todos: Todo[];
-    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-  }
-  
 const NewTodo: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
@@ -31,7 +24,7 @@ const NewTodo: React.FC = () => {
 
   const deleteTodo = (id: number) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
-  }
+  };
 
   const strikeThrough = (index: number) => {
     setTodos((prevTodos) =>
@@ -45,8 +38,6 @@ const NewTodo: React.FC = () => {
     setFilter(newFilter);
   };
 
-  
-
   const moveTodo = (draggedIndex: number, droppedIndex: number) => {
     const updatedTodos = [...todos];
     const [movedTodo] = updatedTodos.splice(draggedIndex, 1);
@@ -55,7 +46,7 @@ const NewTodo: React.FC = () => {
   };
 
   const TodoItem: React.FC<{ todo: Todo; index: number; onDelete: (id: number) => void }> = ({ todo, index, onDelete }) => {
-    const[isHovered, setIsHovered] = useState(false)
+    const [isHovered, setIsHovered] = useState(false);
     const [{ isDragging }, drag] = useDrag({
       type: 'TODO',
       item: { id: todo.id, index },
@@ -82,46 +73,74 @@ const NewTodo: React.FC = () => {
         whileDrag={{ scale: 1.05 }}
       >
         <section
-          className="todoList"
+          className={`mb-0 pb-0 flex items-center w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border bg-light text-light-back dark:text-dark-back dark:bg-dark ${isDragging ? 'bg-white/10 shadow-lg opacity-50 cursor-grabbing' : ''}`}
           ref={(node) => drag(drop(node))}
           style={{ opacity: isDragging ? 0.5 : 1 }}
         >
           <input
-            className="todoCheck"
+            id={`checkbox-${index}`}
             type="checkbox"
             checked={todo.completed}
             onChange={() => strikeThrough(index)}
+            className="peer hidden"
           />
-          <div className="todoBox" onMouseOver={() => setIsHovered(true)}
-            onMouseLeave ={ () => setIsHovered(false)}>
-            <li
-              id={`todo-${index}`}
-              className={`todoItem ${todo.completed ? 'completed' : ''}`}
-            >
+          <label
+            htmlFor={`checkbox-${index}`}
+            className="appearance-none ml-[21px] h-[20px] w-[20px] rounded-full border border-[var(--placeholder-color)] flex items-center justify-center cursor-pointer
+              peer-checked:bg-gradient-to-r peer-checked:from-[hsl(192,100%,67%)] peer-checked:to-[hsl(280,87%,65%)]
+              peer-checked:text-white
+              before:content-[''] peer-checked:before:content-['\2713']
+              peer-checked:before:text-[12px] peer-checked:before:text-white peer-checked:before:flex peer-checked:before:items-center peer-checked:before:justify-center
+              before:h-[20px] before:w-[20px] before:rounded-full"
+          ></label>
+          <div
+            className="flex justify-between items-center w-full h-[50px] ml-[10px] pr-4"
+            onMouseOver={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <li className={`todoItem ${todo.completed ? 'completed' : ''}`}>
               {todo.text}
             </li>
-            <button onClick={() => onDelete(todo.id)} className="deleteTodo" style={{display:isHovered ? 'block':'none'}}>X</button>
+            <button
+              onClick={() => onDelete(todo.id)}
+              className="deleteTodo"
+              style={{ display: isHovered ? 'block' : 'none' }}
+            >
+              X
+            </button>
           </div>
         </section>
       </motion.div>
     );
   };
+
   return (
-    <div className='added-todos'>
-      <AddTodo onAddTodo={addTodo} /> 
-      <ul className="listTodos">
-        {todos
-          .filter((todo) =>
-            filter === "all" ||
-            (filter === "active" && !todo.completed) ||
-            (filter === "completed" && todo.completed)
-          )
-          .map((todo) => {
-            const index = todos.findIndex((t) => t.id === todo.id);
-            return <TodoItem key={todo.id} todo={todo} index={index} onDelete={deleteTodo}/>;
-          })}
-      </ul>
-      <div className='bottomMenu'>
+    <div className="flex flex-col justify-between h-full">
+      <div className="w-[90vw] mx-auto flex flex-col gap-4 box-border overflow-x-hidden flex-grow">
+        <AddTodo onAddTodo={addTodo} />
+
+        <ul className="flex flex-col shadow-md w-full rounded-[5px] overflow-hidden mt-[100px]">
+          {todos
+            .filter((todo) =>
+              filter === 'all' ||
+              (filter === 'active' && !todo.completed) ||
+              (filter === 'completed' && todo.completed)
+            )
+            .map((todo) => {
+              const index = todos.findIndex((t) => t.id === todo.id);
+              return (
+                <TodoItem
+                  key={todo.id}
+                  todo={todo}
+                  index={index}
+                  onDelete={deleteTodo}
+                />
+              );
+            })}
+        </ul>
+      </div>
+
+      <div className="flex justify-evenly items-center w-[90vw] mx-auto bg-light dark:bg-dark rounded-bl-[5px] rounded-br-[5px] dark:rounded-bl-[5px] dark:rounded-br-[5px] border-[var(--placeholder-color)] text-darkGrayishBlue dark:text-lightGrayishBlue h-[50px]">
         <LeftTodo leftTodos={todos} />
         <ShowTodo
           todos={todos}

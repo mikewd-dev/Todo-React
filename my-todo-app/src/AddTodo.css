@@ -1,52 +1,13 @@
-.form-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  margin:0 auto;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  height: 50px;
-  background-color: hsl(0, 0%, 98%);
-  position:fixed;
-  top:40px;
-  margin-bottom: 40px;
-}
+@import "tailwindcss";
 
-.darkMode .form-container{
-  background-color: hsl(235, 24%, 19%);
-  color:hsl(234, 39%, 85%);
-}
-  
-form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height:50px;
-  width:90vw;
-  border-radius: 3px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 3px;
-  
-}
+@custom-variant dark (&:where(9.dark, .dark *));
 
-.addtodoCheck {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 50%;
-  border: 1px solid hsl(233, 11%, 84%);
-  height: 20px;
-  width: 20px;
-  box-sizing: border-box;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  margin-left: 21px;
-}
+@theme {
+  --color-light: hsl(0, 0%, 98%);
+  --color-dark: hsl(235, 24%, 19%);
+  --color-lightGrayishBlue: hsl(233, 11%, 84%);
+  --color-darkGrayishBlue: hsl(234, 11%, 52%);
+  }
 
 body, html {
   height: 100%;
@@ -59,9 +20,5 @@ body, html {
   flex-direction: column;
 }
 
-  .todoInput{
-   padding-left: 10px;
-    font-size: 14px;
-    font-weight: 400;
-  }
+
 

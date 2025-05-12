@@ -1,41 +1,33 @@
-
-
 const config = {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './public/**/*.{html,js}', // Ensure public files are included if needed
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./public/**/*.{html,js}",
   ],
   safelist: [
-    'dark',
-    'dark:bg-custom-image-dark',
-    'bg-custom-image-light',
-    'bg-primary',
-    'dark:bg-secondary',
-    'text-black',
-    'dark:text-white',
+    "dark",
+    "dark:bg-custom-image-dark",
+    "bg-custom-image-light",
+    "bg-primary",
+    "dark:bg-secondary",
+    "text-black",
+    "dark:text-white",
     "bg-[url('/assets/bg-desktop-light.jpg')]",
     "dark:bg-[url('/assets/bg-desktop-dark.jpg')]",
-    "dark:bg-[url('/assets/bg-desktop-dark.jpg')]",
-    'bg-[hsl(210,100%,100%)]',
-    'dark:bg-[hsl(235,24%,18%)]',
+    "bg-[hsl(210,100%,100%)]",
+    "dark:bg-[hsl(235,24%,18%)]",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
-    
     screens: {
-      sm: '400px',
-      md: '700px',
-      lg: '1100px',
-      xl: '1400px',
-    },
-    colors: {
-      'primary': 'hsl(210, 100%, 100%)',
-      'secondary': 'hsl(235, 24%, 18%)',
+      sm: "400px",
+      md: "700px",
+      lg: "1100px",
+      xl: "1400px",
     },
     extend: {
       fontFamily: {
-        'custom-font': ['"Josefin Sans"', 'sans-serif'],
+        custom: ['"Josefin Sans"', 'sans-serif'],
       },
       fontSize: {
         '18px': '18px',
@@ -48,10 +40,9 @@ const config = {
       width: {
         '90vw': '90vw',
       },
-
     },
   },
   plugins: [],
-} satisfies Config
+} satisfies Config;
 
 export default config;
