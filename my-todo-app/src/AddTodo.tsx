@@ -27,8 +27,8 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
   return (
     <div className='flex flex-row justify-center items-center w-[90vw] rounded-[5px] h-[50px] fixed bg-light dark:bg-dark gap-
   4 mt-5'>
-      <form className ='flex flex-row items-center h-[50px] w-[90vw] gap-4 rounded-[5px] mb-0' onSubmit={handleSubmit}>
-        <input className='appearance-none -webkit-appearance-none -moz-appearance-none border-[1px] border-lightGrayishBlue dark:border-darkGrayishBlue rounded-[50%] h-[20px] w-[20px] ml-[21px] box-border'
+      <form className ='flex flex-row items-center h-[50px] w-[90vw] gap-4 rounded-[5px] mb-0 text-light-back dark:text-dark-back' onSubmit={handleSubmit}>
+        <input className='appearance-none -webkit-appearance-none -moz-appearance-none border-[1px] border-border-color dark:border-border-color rounded-[50%] h-[20px] w-[20px] ml-[21px] box-border'
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange} 

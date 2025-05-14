@@ -73,7 +73,7 @@ const NewTodo: React.FC = () => {
         whileDrag={{ scale: 1.05 }}
       >
         <section
-          className={`mb-0 pb-0 flex items-center w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border bg-light text-light-back dark:text-dark-back dark:bg-dark ${isDragging ? 'bg-white/10 shadow-lg opacity-50 cursor-grabbing' : ''}`}
+          className={`mb-0 pb-0 flex items-center w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border dark:text-dark-back text-light-back bg-light dark:bg-dark ${isDragging ? 'bg-white/10 shadow-lg opacity-50 cursor-grabbing' : ''}`}
           ref={(node) => drag(drop(node))}
           style={{ opacity: isDragging ? 0.5 : 1 }}
         >
@@ -98,7 +98,13 @@ const NewTodo: React.FC = () => {
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <li className={`todoItem ${todo.completed ? 'completed' : ''}`}>
+            <li
+              className={`todoItem ${
+                todo.completed
+                  ? 'line-through text-completed dark:text-dark-completed font-thin'
+                  : ''
+              }`}
+            >
               {todo.text}
             </li>
             <button
@@ -140,7 +146,7 @@ const NewTodo: React.FC = () => {
         </ul>
       </div>
 
-      <div className="flex justify-evenly items-center w-[90vw] mx-auto bg-light dark:bg-dark rounded-bl-[5px] rounded-br-[5px] dark:rounded-bl-[5px] dark:rounded-br-[5px] border-[var(--placeholder-color)] text-darkGrayishBlue dark:text-lightGrayishBlue h-[50px]">
+      <div className="flex justify-evenly items-center w-[90vw] mx-auto bg-light dark:bg-dark rounded-bl-[5px] rounded-br-[5px] dark:rounded-bl-[5px] dark:rounded-br-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px]">
         <LeftTodo leftTodos={todos} />
         <ShowTodo
           todos={todos}

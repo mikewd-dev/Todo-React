@@ -1,15 +1,26 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@custom-variant dark (&:where(9.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @theme {
   --color-light: hsl(0, 0%, 98%);
-  --color-dark: hsl(235, 24%, 19%);
-  --color-lightGrayishBlue: hsl(233, 11%, 84%);
-  --color-darkGrayishBlue: hsl(234, 11%, 52%);
+  --color-dark:hsl(235, 24%, 19%) ;
+  --color-light-back: hsl(235, 19%, 35%);
+  --color-dark-back: hsl(234, 39%, 85%);
+  --color-border-color: #999999;
+  --placeholder-color: hsl(233, 11%, 84%);
+  --color-completed: hsl(234, 39%, 85%);
+  --filter-color: hsl(236, 9%, 61%);
+  --filter-active: hsl(220, 98%, 61%);
+  --font-size: 14px;
+  --font-family: sans-serif;
   }
 
-body, html {
+/*body, html {
   height: 100%;
   overflow-x: hidden;
 }
@@ -18,7 +29,7 @@ body, html {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-}
+}*/
 
 
 

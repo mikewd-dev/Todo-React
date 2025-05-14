@@ -6,7 +6,7 @@
 
 @theme {
   --color-back-light:hsl(236, 33%, 92%);
-  --color-back-dark:hsl(235, 24%, 19%);
+  --color-back-dark:hsl(235, 21%, 11%);
 }
 
 :root {
@@ -20,6 +20,9 @@
 }
 
 
+body,html{
+  height: 100vh;
+  }
 
 
 
