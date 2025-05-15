@@ -1,0 +1,26 @@
+   @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Base Theme Variables */
+@theme {
+  --color-light: hsl(0, 0%, 98%);
+  --color-dark:hsl(235, 24%, 19%) ;
+
+  --color-light-back: hsl(235, 19%, 35%);
+  --color-dark-back: hsl(234, 39%, 85%);
+  --color-border-color: #999999;
+  --placeholder-color: hsl(233, 11%, 84%);
+  --color-completed: hsl(234, 39%, 85%);
+   --color-dark-compled:
+  --color-filter: hsl(236, 9%, 61%);
+  --color-filter-active: hsl(220, 98%, 61%);
+  --color-gradient: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --delete-color: #d6d6d6;
+  --font-size: 14px;
+  --font-family: sans-serif;
+  }
+
