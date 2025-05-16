@@ -1,46 +1,44 @@
-import {useState} from 'react';
-import { useDrag, useDrop } from 'react-dnd';
-import { motion } from 'framer-motion';
-import "./TodoItem.css"
+import { useState } from "react";
+import { useDrag, useDrop } from "react-dnd";
+import { motion } from "framer-motion";
+import "./TodoItem.css";
 
-    const TodoItem: React.FC<{
-      todo: Todo;
-      index: number;
-      onDelete: (id: number) => void;
-      moveTodo: (from: number, to: number) => void;
-      strikeThrough: (index: number) => void;
-    }> = ({ todo, index, onDelete, moveTodo, strikeThrough }) => {
-      const [isHovered, setIsHovered] = useState(false); // <--- add this back
+const TodoItem: React.FC<{
+  todo: Todo;
+  index: number;
+  onDelete: (id: number) => void;
+  moveTodo: (from: number, to: number) => void;
+  strikeThrough: (index: number) => void;
+}> = ({ todo, index, onDelete, moveTodo, strikeThrough }) => {
+  const [isHovered, setIsHovered] = useState(false); // <--- add this back
 
-      const [{ isDragging }, drag] = useDrag({
-        type: 'TODO',
-        item: { id: todo.id, index },
-        collect: (monitor) => ({
-          isDragging: monitor.isDragging(),
-        }),
-      });
+  const [{ isDragging }, drag] = useDrag({
+    type: "TODO",
+    item: { id: todo.id, index },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
 
-      const [, drop] = useDrop({
-        accept: 'TODO',
-        drop: (item: { id: number; index: number }) => {
-          const dragIndex = item.index;
-          const dropIndex = index;
-          if (dragIndex !== dropIndex) {
-            moveTodo(dragIndex, dropIndex);
-          }
-        },
-      });
-  
-
+  const [, drop] = useDrop({
+    accept: "TODO",
+    drop: (item: { id: number; index: number }) => {
+      const dragIndex = item.index;
+      const dropIndex = index;
+      if (dragIndex !== dropIndex) {
+        moveTodo(dragIndex, dropIndex);
+      }
+    },
+  });
 
   return (
     <motion.div
       layout
-      transition={{ type: 'spring', stiffness: 500 }}
+      transition={{ type: "spring", stiffness: 500 }}
       whileDrag={{ scale: 1.05 }}
     >
       <section
-        className={`mb-0 pb-0 flex items-center w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border dark:text-dark-back text-light-back bg-light dark:bg-dark ${isDragging ? 'bg-white/10 shadow-lg opacity-50 cursor-grabbing' : ''}`}
+        className={`mb-0 mt-0 pb-0 flex items-center w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border dark:text-dark-back text-light-back bg-light dark:bg-dark ${isDragging ? "bg-white/10 shadow-lg opacity-50 cursor-grabbing" : ""}`}
         ref={(node) => drag(drop(node))}
         style={{ opacity: isDragging ? 0.5 : 1 }}
       >
@@ -74,8 +72,8 @@ import "./TodoItem.css"
           <li
             className={`todoItem ${
               todo.completed
-                ? 'line-through text-completed dark:text-dark-completed font-thin'
-                : ''
+                ? "line-through text-completed dark:text-dark-completed font-thin"
+                : ""
             }`}
           >
             {todo.text}
@@ -83,7 +81,7 @@ import "./TodoItem.css"
           <button
             onClick={() => onDelete(todo.id)}
             className="deleteTodo"
-            style={{ display: isHovered ? 'block' : 'none' }}
+            style={{ display: isHovered ? "block" : "none" }}
           >
             X
           </button>

@@ -20,16 +20,16 @@
   --font-family: sans-serif;
   }
 
-/*body, html {
+body, html {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .mainWrapper {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-}*/
+}
 
 
 

@@ -22,10 +22,10 @@ const config = {
   darkMode: "class",
   theme: {
     screens: {
-      sm: "400px",
-      md: "700px",
-      lg: "1100px",
-      xl: "1400px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1200px",
     },
     extend: {
       fontFamily: {
