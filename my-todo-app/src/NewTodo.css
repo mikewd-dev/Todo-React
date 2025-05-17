@@ -22,9 +22,5 @@
   --delete-color: #d6d6d6;
   --font-size: 14px;
   --font-family: sans-serif;
-  --breakpoint-*: initial;
-  --breakpoint-tablet: 40rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 80rem;
-  }
+}
 
