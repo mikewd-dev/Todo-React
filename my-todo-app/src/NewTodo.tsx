@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import AddTodo from './AddTodo';
-import './NewTodo.css';
-import LeftTodo from './LeftTodo';
-import ClearTodo from './ClearComplete';
-import ShowTodo from './TodoStatus';
-import TodoItem from './TodoItem'; 
-
+import { useState } from "react";
+import AddTodo from "./AddTodo";
+import "./NewTodo.css";
+import LeftTodo from "./LeftTodo";
+import ClearTodo from "./ClearComplete";
+import ShowTodo from "./TodoStatus";
+import TodoItem from "./TodoItem";
 
 interface Todo {
   id: number;
@@ -29,8 +28,8 @@ const NewTodo: React.FC = () => {
   const strikeThrough = (index: number) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo, i) =>
-        i === index ? { ...todo, completed: !todo.completed } : todo
-      )
+        i === index ? { ...todo, completed: !todo.completed } : todo,
+      ),
     );
   };
 
@@ -45,10 +44,11 @@ const NewTodo: React.FC = () => {
     setTodos(updatedTodos);
   };
 
-  const filteredTodos = todos.filter((todo) =>
-    filter === 'all' ||
-    (filter === 'active' && !todo.completed) ||
-    (filter === 'completed' && todo.completed)
+  const filteredTodos = todos.filter(
+    (todo) =>
+      filter === "all" ||
+      (filter === "active" && !todo.completed) ||
+      (filter === "completed" && todo.completed),
   );
 
   return (
@@ -56,7 +56,7 @@ const NewTodo: React.FC = () => {
       <div className="w-[90vw] mx-auto flex flex-col gap-4 box-border overflow-x-hidden flex-grow">
         <AddTodo onAddTodo={addTodo} />
 
-          <ul className="flex flex-col shadow-md w-full rounded-[5px] overflow-hidden">
+        <ul className="flex flex-col shadow-md w-full rounded-[5px] overflow-hidden">
           {filteredTodos.map((todo, index) => (
             <TodoItem
               key={todo.id}
@@ -69,34 +69,34 @@ const NewTodo: React.FC = () => {
           ))}
         </ul>
       </div>
-<div className='md:flex flex-row lg:flex flex-row items-center xl:flex flex-row xs:hide sm:hide items-center'>
-  <div className="flex flex-row justify-between items-center w-[90vw] mx-auto  bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] mt-0 px-4">
-    <LeftTodo leftTodos={todos} />
-    <ShowTodo
-      todos={todos}
-      filter={filter}
-      onFilterChange={handleFilterChange}
-    />
-    <ClearTodo leftTodos={todos} setTodos={setTodos} />
-  </div>
-</div>
+      <div className="invisible flex flex-row">
+        <div className="md:visible md:flex flex-row justify-between items-center w-[90vw] mx-auto  bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] mt-0 px-4">
+          <LeftTodo leftTodos={todos} />
+          <ShowTodo
+            todos={todos}
+            filter={filter}
+            onFilterChange={handleFilterChange}
+          />
+          <ClearTodo leftTodos={todos} setTodos={setTodos} />
+        </div>
+      </div>
 
-{/* Footer for small screens - LeftTodo & ClearTodo */}
-<div className="hidden">
-<div className="md:flex flex-row justify-between items-center w-[90vw] mx-auto bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
-  <LeftTodo leftTodos={todos} />
-  <ClearTodo leftTodos={todos} setTodos={setTodos} />
-</div>
+      {/* Footer for small screens - LeftTodo & ClearTodo */}
+      <div className="visible md:invisible">
+        <div className="md:invisible sm:visible flex flex-row justify-between items-center w-[90vw] mx-auto bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
+          <LeftTodo leftTodos={todos} />
+          <ClearTodo leftTodos={todos} setTodos={setTodos} />
+        </div>
 
-{/* Footer for small screens - ShowTodo */}
-<div className="flex flex-row justify-center items-center w-[90vw] mx-auto mt-4 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
-  <ShowTodo
-    todos={todos}
-    filter={filter}
-    onFilterChange={handleFilterChange}
-  />
-</div>
-</div>
+        {/* Footer for small screens - ShowTodo */}
+        <div className="md:invisible sm:visible flex flex-row justify-center items-center w-[90vw] mx-auto mt-4 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
+          <ShowTodo
+            todos={todos}
+            filter={filter}
+            onFilterChange={handleFilterChange}
+          />
+        </div>
+      </div>
     </div>
   );
 };
