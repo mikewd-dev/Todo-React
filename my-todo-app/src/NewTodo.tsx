@@ -69,8 +69,8 @@ const NewTodo: React.FC = () => {
           ))}
         </ul>
       </div>
-      <div className="invisible flex flex-row">
-        <div className="md:visible md:flex flex-row justify-between items-center w-[90vw] mx-auto  bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] mt-0 px-4">
+      <div className="mt-[-50px] invisible flex flex-row">
+        <div className="mt-[50px]  md:visible md:flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
           <LeftTodo leftTodos={todos} />
           <ShowTodo
             todos={todos}
@@ -82,14 +82,15 @@ const NewTodo: React.FC = () => {
       </div>
 
       {/* Footer for small screens - LeftTodo & ClearTodo */}
-      <div className="visible md:invisible">
-        <div className="md:invisible sm:visible flex flex-row justify-between items-center w-[90vw] mx-auto bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
+      <div className="visible md:invisible top-39">
+        <div className="mt-[-50px] top-0
+        md:invisible sm:visible flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
           <LeftTodo leftTodos={todos} />
           <ClearTodo leftTodos={todos} setTodos={setTodos} />
         </div>
 
         {/* Footer for small screens - ShowTodo */}
-        <div className="md:invisible sm:visible flex flex-row justify-center items-center w-[90vw] mx-auto mt-4 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
+        <div className="md:invisible sm:visible flex flex-row justify-center items-center w-[90vw] mx-auto mt-3 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
           <ShowTodo
             todos={todos}
             filter={filter}
