@@ -81,7 +81,7 @@ const NewTodo: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer for small screens - LeftTodo & ClearTodo */}
+      {/* Small screens - LeftTodo & ClearTodo */}
       <div className="visible md:invisible top-39">
         <div className="mt-[-50px] top-0
         md:invisible sm:visible flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
@@ -89,7 +89,7 @@ const NewTodo: React.FC = () => {
           <ClearTodo leftTodos={todos} setTodos={setTodos} />
         </div>
 
-        {/* Footer for small screens - ShowTodo */}
+        {/*Small Screen - ShowTodo*/}
         <div className="md:invisible sm:visible flex flex-row justify-center items-center w-[90vw] mx-auto mt-3 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
           <ShowTodo
             todos={todos}
