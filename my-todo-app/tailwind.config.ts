@@ -22,13 +22,12 @@ const config = {
   darkMode: "class",
   theme: {
     screens: {
-      xs: '320px',      // Extra small devices (e.g., phones)
-      sm: '375px',      // Small mobiles (e.g., iPhone SE)
-      md: '640px',      // Larger mobiles (e.g., iPhone 6/7/8 Plus, Pixel)
-      lg: '768px',     // Tablets (portrait mode, e.g., iPad)
-      xl: '1024px',     // Larger tablets (landscape mode, some smaller laptops)
-      '2xl': '1280px',    // Desktops
-      // You can add even larger breakpoints if needed
+      xs: '320px',    
+      sm: '375px',      
+      md: '640px',
+      lg: '768px',
+      xl: '1024px',
+      '2xl': '1280px',
     },
     extend: {
       fontFamily: {
