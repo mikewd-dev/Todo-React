@@ -1,0 +1,7 @@
+[build]
+  base = "Todo-React/my-todo-app"
+  publish = "dist"
+  command = "npm run build"
+
+[functions]
+  directory = "netlify/functions"
