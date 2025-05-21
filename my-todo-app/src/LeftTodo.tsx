@@ -9,15 +9,20 @@ interface Todo {
 }
 
 interface LeftTodoProps {
-    todos: Todo[];
+  todos: Todo[];
 }
-const LeftTodo: React.FC<LeftTodoProps> = ({leftTodos})=> {
- const leftItems = leftTodos.reduce((count, leftTodo) => !leftTodo.completed ? count + 1 : count, 0);
-    
-return (
-    
-    <div className="flex flex-row items-center text-[14px] font-normal text-darkGrayishBlue dark:text-lightGrayishBlue">{`${leftItems} items left`}</div>
-    
-)
-}
-export default LeftTodo
+
+const LeftTodo: React.FC<LeftTodoProps> = ({ todos }) => {
+  const leftItems = todos.reduce(
+    (count, todo) => (!todo.completed ? count + 1 : count),
+    0
+  );
+
+  return (
+    <div className="flex flex-row items-center text-[14px] font-normal text-darkGrayishBlue dark:text-lightGrayishBlue">
+      {`${leftItems} items left`}
+    </div>
+  );
+};
+
+export default LeftTodo;
