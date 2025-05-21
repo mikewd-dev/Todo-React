@@ -71,7 +71,7 @@ const NewTodo: React.FC = () => {
       </div>
       <div className="mt-[-50px] invisible flex flex-row">
         <div className="mt-[50px]  md:visible md:flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
-          <LeftTodo leftTodos={todos} />
+          <LeftTodo todos={todos} />
           <ShowTodo
             todos={todos}
             filter={filter}
