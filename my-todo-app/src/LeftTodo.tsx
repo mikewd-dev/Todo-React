@@ -2,6 +2,12 @@ import React from "react";
 import { useState } from "react";
 import  NewTodo from "./NewTodo";
 import './LeftTodo.css'
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
 interface LeftTodoProps {
     leftTodos: Todo[];
 }

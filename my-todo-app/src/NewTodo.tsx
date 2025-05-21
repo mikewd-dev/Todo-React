@@ -77,7 +77,7 @@ const NewTodo: React.FC = () => {
             filter={filter}
             onFilterChange={handleFilterChange}
           />
-          <ClearTodo leftTodos={todos} setTodos={setTodos} />
+          <ClearTodo todos={todos} setTodos={setTodos} />
         </div>
       </div>
 
@@ -86,7 +86,7 @@ const NewTodo: React.FC = () => {
         <div className="mt-[-50px] top-0
         md:invisible sm:visible flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
           <LeftTodo leftTodos={todos} />
-          <ClearTodo leftTodos={todos} setTodos={setTodos} />
+          <ClearTodo todos={todos} setTodos={setTodos} />
         </div>
 
         {/*Small Screen - ShowTodo*/}

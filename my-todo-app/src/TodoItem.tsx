@@ -3,6 +3,12 @@ import { useDrag, useDrop } from "react-dnd";
 import { motion } from "framer-motion";
 import "./TodoItem.css";
 
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
 const TodoItem: React.FC<{
   todo: Todo;
   index: number;
