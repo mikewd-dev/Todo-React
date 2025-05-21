@@ -9,7 +9,7 @@ interface Todo {
 }
 
 interface LeftTodoProps {
-    leftTodos: Todo[];
+    todos: Todo[];
 }
 const LeftTodo: React.FC<LeftTodoProps> = ({leftTodos})=> {
  const leftItems = leftTodos.reduce((count, leftTodo) => !leftTodo.completed ? count + 1 : count, 0);
