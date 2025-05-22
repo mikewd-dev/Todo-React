@@ -9,6 +9,8 @@ export default defineConfig({
         allowedHosts: [
             "7a6f73ee-d54d-47b6-aabf-fb8bff0b7ab0-00-3rqjno6ohyscf.riker.replit.dev",
         ],
-        outDir: 'dist',
+    },
+    build: {
+        outDir: 'dist', // Move it here
     },
 });
