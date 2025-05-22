@@ -28,6 +28,7 @@
             
               <div className="flex justify-between items-center mt-[30px] w-[90vw] h-[20px]">
                 <h1 className="font-bold-size tracking-widest">TODO</h1>
+                <p>This is to test why there are no changes to netlify</p>
                 <button onClick={toggleDarkMode}>
                   <FontAwesomeIcon
                     icon={darkMode ? faSun : faMoon}
