@@ -1,7 +1,7 @@
 [build]
   base = "my-todo-app"
-  publish = "my-todo-app/dist"
+  publish = "dist"
   command = "npm run build"
 
-[functions]
-  directory = "my-todo-app/netlify/functions"
+# [functions]
+#   directory = "netlify/functions"
