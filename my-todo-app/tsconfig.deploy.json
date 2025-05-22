@@ -1,0 +1,12 @@
+{
+"compilerOptions": {
+"target": "ES2017",
+"module": "commonjs",
+"lib": ["ES2017"],
+"esModuleInterop": true,
+"moduleResolution": "node",
+"outDir": "./dist",
+"strict": true
+},
+"include": ["deploy.ts"]
+}
