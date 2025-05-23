@@ -40,8 +40,6 @@
               <DndProvider options={HTML5toTouch}>
                 <NewTodo />
               </DndProvider>
-
-              
               <footer className="mt-8">
                 <p className="text-[14px]">Drag and drop to reorder list</p>
               </footer>
@@ -49,5 +47,4 @@
           </div>
         );
       };
-
       export default App;
