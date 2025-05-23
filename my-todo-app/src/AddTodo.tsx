@@ -50,7 +50,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
           onChange={handleCheckboxChange} 
         />
         <input
-          className="flex items-center justify-center text-darkGrayishBlue dark:text-lightGrayishBlue w-auto font-normal text-[14px] pl-[5px]"
+          className="flex items-center justify-center text-darkGrayishBlue dark:text-lightGrayishBlue w-full font-normal text-[14px] pl-[5px]"
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
