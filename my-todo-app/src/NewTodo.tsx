@@ -53,7 +53,7 @@ const NewTodo: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-between h-full">
-      <div className="w-[90vw] mx-auto flex flex-col gap-4 box-border overflow-x-hidden flex-grow">
+      <div className="2xl:w-[60vw] mx-auto flex flex-col gap-4 box-border overflow-x-hidden">
         <AddTodo onAddTodo={addTodo} />
 
         <ul className="flex flex-col shadow-md w-full rounded-[5px] overflow-hidden">
@@ -70,7 +70,7 @@ const NewTodo: React.FC = () => {
         </ul>
       </div>
       <div className="mt-[-50px] invisible flex flex-row">
-        <div className="mt-[50px] md:visible md:flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
+        <div className="mt-[50px] md:visible md:flex flex-row justify-between items-center justify-center w-[60vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
           <LeftTodo todos={todos} />
           <ShowTodo
             todos={todos}
@@ -84,13 +84,13 @@ const NewTodo: React.FC = () => {
       {/* Small screens - LeftTodo & ClearTodo */}
       <div className="visible md:invisible top-39">
         <div className="mt-[-50px] top-0
-        md:invisible sm:visible flex flex-row justify-between items-center w-[90vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
+        md:invisible sm:visible flex flex-row justify-between items-center w-[60vw] bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back h-[50px] px-4">
           <LeftTodo todos={todos} />
           <ClearTodo todos={todos} setTodos={setTodos} />
         </div>
 
         {/*Small Screen - ShowTodo*/}
-        <div className="md:invisible sm:visible flex flex-row justify-center items-center w-[90vw] mx-auto mt-3 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
+        <div className="md:invisible sm:visible flex flex-row justify-center items-center w-[60vw] mx-auto mt-3 py-3 bg-light dark:bg-dark rounded-[5px] border-[var(--placeholder-color)] text-light-back dark:text-dark-back">
           <ShowTodo
             todos={todos}
             filter={filter}

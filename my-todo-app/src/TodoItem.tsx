@@ -44,7 +44,7 @@ const TodoItem: React.FC<{
       whileDrag={{ scale: 1.05 }}
     >
       <section
-        className={`mb-0 mt-0 pb-0 flex items-center w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border dark:text-dark-back text-light-back bg-light dark:bg-dark ${isDragging ? "bg-white/10 shadow-lg opacity-50 cursor-grabbing" : ""}`}
+        className={`mb-0 mt-0 pb-0 flex items-center 2xl:w-[60vw] md:w-[90vw] h-[50px] gap-[10px] mx-auto border-b border-border-color box-border dark:text-dark-back text-light-back bg-light dark:bg-dark ${isDragging ? "bg-white/10 shadow-lg opacity-50 cursor-grabbing" : ""}`}
         ref={(node) => drag(drop(node))}
         style={{ opacity: isDragging ? 0.5 : 1 }}
       >

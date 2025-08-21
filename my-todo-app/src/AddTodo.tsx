@@ -41,8 +41,8 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
 
 
   return (
-    <div className='flex flex-row justify-center items-center w-[90vw] rounded-[5px] h-[50px] bg-light dark:bg-dark gap-4 mt-5'>
-      <form className ={`flex flex-row items-center h-[50px] w-[90vw] gap-4 rounded-[5px] text-light-back dark:text-dark-back ${isEmpty ? 'border border-red-500' : ''}`} 
+    <div className='flex flex-row items-center justify-center w-[60vw] w-[60vw] rounded-[5px] h-[50px] bg-light dark:bg-dark gap-4 mt-5'>
+      <form className ={`flex flex-col items-center h-[50px] w-[60vw] w-[60vw] gap-4 rounded-[5px] text-light-back dark:text-dark-back ${isEmpty ? 'border border-red-500' : ''}`} 
       onSubmit={handleSubmit}>
         <input className='appearance-none -webkit-appearance-none -moz-appearance-none border-[1px] border-border-color dark:border-border-color rounded-[50%] h-[20px] w-[20px] ml-[21px] box-border'
           type="checkbox"
@@ -50,7 +50,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAddTodo }) => {
           onChange={handleCheckboxChange} 
         />
         <input
-          className="flex items-center justify-center text-darkGrayishBlue dark:text-lightGrayishBlue w-full font-normal text-[14px] pl-[5px]"
+          className="flex items-center  text-darkGrayishBlue dark:text-lightGrayishBlue w-full font-normal text-[14px] pl-[5px]"
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
